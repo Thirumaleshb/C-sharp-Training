@@ -1,22 +1,23 @@
-﻿
-using System;
+﻿// See https://aka.ms/new-console-template for more information
+//Console.WriteLine("Hello, World!");
 
-namespace MyFirstProgram
-{
-    class Program
-    {
-        static void Main (string[] args)
-        {
-            Console.WriteLine("Converting Temperature's");
-            double temp = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("The Value it is Read is " + temp);
-            Console.WriteLine(Program.FahrenheitToCelsius(temp));
-        }
+int b=10, c = 20;
 
-        static double FahrenheitToCelsius(double temperatureFahrenheit)
-        {
-            double temperatureCelsius = Convert.ToDouble((temperatureFahrenheit - 32) / 1.8);
-            return temperatureCelsius;
-        }
-    }
-}
+int hours = 15;
+int pay = 130;
+
+double total = hours * pay;
+
+total += 3;
+Console.WriteLine(total);
+
+
+int max = int.MaxValue;
+int min = int.MinValue;
+Console.WriteLine(max);
+Console.WriteLine("Enter The Character");
+char user = Convert.ToChar(Console.ReadLine());
+Console.WriteLine(char.ToUpper(user));
+Console.WriteLine(char.ToLower(user));
+Console.WriteLine(min);
+//Console.WriteLine(10 + b + c);
