@@ -1,0 +1,204 @@
+using System.Text;
+
+int b=10, c = 20;
+
+int hours = 15;
+int pay = 130;
+
+double total = hours * pay;
+
+total += 3;
+Console.WriteLine(total);
+
+
+int max = int.MaxValue;
+int min = int.MinValue;
+Console.WriteLine(max);
+Console.WriteLine("Enter The Character");
+char user = Convert.ToChar(Console.ReadLine());
+Console.WriteLine(char.ToUpper(user));
+Console.WriteLine(char.ToLower(user));
+Console.WriteLine(min);
+
+
+double d = 10.2;
+int var1 = (int) Convert.ChangeType(d,typeof(int));
+Console.WriteLine(var1);
+
+
+var key = 120;
+int value = key;
+Console.WriteLine(value);
+
+//Console.WriteLine(10 + b + c);
+
+
+
+// Creating and Working on Strings
+
+
+String Name = "Thirru";
+int value1 = Name.Length;
+Console.WriteLine("The Length of the String is " + value1);
+Console.WriteLine("Converting to LowerCase " + Name.ToLower());
+Console.WriteLine("Converting to UpperCase " + Name.ToUpper());
+Console.WriteLine("Checking the Pattern " + Name.Contains("hi"));
+Console.WriteLine("Extracting the Substrings " + Name.Substring(2));
+Console.WriteLine("Replacing the Character " + Name.Replace('r', 'b'));
+
+String name = "thiru";
+Console.WriteLine(String.Concat(name,Name));
+Console.WriteLine("Hello {0}", name);
+
+Console.WriteLine(@"Hello \nThirumalesh B");
+
+Console.WriteLine(name.ToLower() == name.ToUpper());
+Console.WriteLine(!(name.ToLower() == name.ToUpper()));
+
+
+StringBuilder sb = new StringBuilder();
+sb.Append("My Name is :");
+sb.Append("Thirumalesh B");
+Console.WriteLine(sb.ToString());
+
+Console.WriteLine("Enter The Value");
+string wage = Console.ReadLine();
+int value11 = int.Parse(wage);
+Console.WriteLine(value11);
+
+
+
+
+
+
+int b = 10, c = 20;
+
+        int hours = 15;
+        int pay = 130;
+
+        double total = hours * pay;
+
+        total += 3;
+        Console.WriteLine(total);
+
+
+        int max = int.MaxValue;
+        int min = int.MinValue;
+        Console.WriteLine(max);
+        Console.WriteLine("Enter The Character");
+        char user = Convert.ToChar(Console.ReadLine());
+        Console.WriteLine(char.ToUpper(user));
+        Console.WriteLine(char.ToLower(user));
+        Console.WriteLine(min);
+
+
+        double d = 10.2;
+        int var1 = (int)Convert.ChangeType(d, typeof(int));
+        Console.WriteLine(var1);
+
+
+        var key = 120;
+        int value = key;
+        Console.WriteLine(value);
+
+        //Console.WriteLine(10 + b + c);
+
+
+
+        // Creating and Working on Strings
+
+
+        String Name = "Thirru";
+        int value1 = Name.Length;
+        Console.WriteLine("The Length of the String is " + value1);
+        Console.WriteLine("Converting to LowerCase " + Name.ToLower());
+        Console.WriteLine("Converting to UpperCase " + Name.ToUpper());
+        Console.WriteLine("Checking the Pattern " + Name.Contains("hi"));
+        Console.WriteLine("Extracting the Substrings " + Name.Substring(2));
+        Console.WriteLine("Replacing the Character " + Name.Replace('r', 'b'));
+
+        String name = "thiru";
+        Console.WriteLine(String.Concat(name, Name));
+        Console.WriteLine("Hello {0}", name);
+
+        Console.WriteLine(@"Hello \nThirumalesh B");
+
+        Console.WriteLine(name.ToLower() == name.ToUpper());
+        Console.WriteLine(!(name.ToLower() == name.ToUpper()));
+
+
+        StringBuilder sb = new StringBuilder();
+        sb.Append("My Name is :");
+        sb.Append("Thirumalesh B");
+        Console.WriteLine(sb.ToString());
+
+        Console.WriteLine("Enter The Value");
+        string wage = Console.ReadLine();
+        int value11 = int.Parse(wage);
+        Console.WriteLine(value11);
+
+
+
+        Console.WriteLine("The Actual Amount is ");
+        Console.WriteLine(Calculate(12, 1250));
+		
+		
+		
+using System.Text;
+using System;
+
+class Function {
+        public  static void Main(string[] args)
+    {
+        Console.WriteLine("The Actual Amount is ");
+        int a = 12;
+        int b = 1250;
+        int c = 20;
+
+        Employee emp=Employee.gender;
+        Console.WriteLine(emp);
+        Console.WriteLine(emp);
+
+        
+
+
+   // Console.WriteLine(enum);
+
+
+
+        //Console.WriteLine(Calculate(a, b));
+        //Console.WriteLine(Calculate(a:10, b:20,  c:30));
+        //Console.WriteLine(c);
+
+        Calculate(20, 30, 40, 555, 60,60);
+    }
+
+    static public int Calculate(int a ,   int b)
+    {
+        //b = b + 1;
+        return a * b;
+    }
+    static public int Calculate(int a, int c, int b)
+    {
+        Console.WriteLine("The Method is OverLoading");
+        c = c + 1;
+        return (a * b) + c;
+    }
+
+    static public void Calculate(params int[] arr)
+    {
+        Console.WriteLine(arr.Length);
+    }
+
+    enum Employee
+    {
+        name,
+        age,
+        gender
+    }
+
+}
+
+
+
+//

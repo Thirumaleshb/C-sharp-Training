@@ -1,0 +1,75 @@
+// See https://aka.ms/new-console-template for more information
+//Console.WriteLine("Hello, World!");
+// See https://aka.ms/new-console-template for more information
+//Console.WriteLine("Hello, World!");
+
+
+class Employee
+{
+    public string name;
+    public int age;
+    private int salary;
+
+    public static int bonus = 10;
+
+
+    public int Salary {
+        get {return salary;}
+        set
+{
+    salary = value;
+}
+   }
+
+
+    
+    Employee(string name,int age = 0)
+    {
+       this.name = name;
+        this.age = age;
+    }
+
+    //Employee(string name="", int age = 0)
+    //{
+     ///   name = name;
+      //  age = age;
+    //}
+    
+    private void calculateWage(int wage)
+    {
+        Console.WriteLine($"The Wage of an {this.name} is " + (wage * age));
+    }
+
+    public void Check_Bonus()
+    {
+        Employee.bonus += 10;
+    }
+
+
+    public void display()
+    {
+        Console.WriteLine($"The Bonus Value  of {this.name} is " + Employee.bonus);
+    }
+
+    public static void Main(string[] args)
+    {
+        Employee emp = new Employee("Manoj",40);
+        Employee emp2 = new Employee("Sagar",55);
+        // emp2.name = "Sagar";
+
+        //Console.WriteLine(emp.name);
+        //emp.calculateWage(5);
+        //Console.WriteLine(Employee.bonus);
+        int num1, num2 = int.Parse(Console.ReadLine().split(" "));
+        emp.display();
+        emp2.display();
+        emp.Check_Bonus();
+        emp.display();
+        emp2.display();
+
+    }
+}
+
+
+
+
