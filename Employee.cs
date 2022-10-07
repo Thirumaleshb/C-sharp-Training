@@ -73,9 +73,9 @@ class organisation: BaseClass
     }
 }
 
-class BaseClass
+public class BaseClass : IBaseClass
 {
-    public int Id { get; set; } 
+    public int Id { get; set; }
 }
 
 

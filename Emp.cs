@@ -14,12 +14,18 @@ namespace Generics
             employee emp = new employee();
             emp.Id = 1;
             emp.Name = "Thiru";
-            EmployeeRepository<employee> empr = new EmployeeRepository<employee>();
-            EmployeeRepository<organisation> empr1 = new EmployeeRepository<organisation>();
+             var empr = new SqlRepository<employee>(new Storage());
+            ListRepository<organisation> empr1 = new ListRepository<organisation>();
             EmployyeeRepositorySub empr2 = new EmployyeeRepositorySub();
             empr.add(emp);
-            empr.add( new employee{Id=2, Name="Bhavana"});
+            empr.add(new employee{Id=2, Name="Bhavana"});
             empr.save();
+
+            //var empp = new Object();
+            //Console.WriteLine(empp.Copy());
+
+            Addemployee(empr);
+            Addorganisations(empr1);
 
             var vari=empr.GetById(2);
             Console.WriteLine("The Employee Who Got Removed is " + vari.Name);
@@ -31,5 +37,28 @@ namespace Generics
             empr1.save();
             empr2.remove(emp);
         }
+
+        private static void Addemployee(IRepository<employee> emp)
+        {
+            var empl = new[]
+            {
+                new employee{Id=2,Name="Thiru"},
+                new employee{Id=3,Name="Manoj"}
+            };
+        emp.AddBatch(empl);
+            Console.WriteLine(emp.Copy());
+        }
+
+        private static void Addorganisations(IRepository<organisation> org)
+        {
+            var orgl = new[]
+            {
+                new organisation{Id=4,FirstName="Thiru"},
+                new organisation{Id=5,FirstName="Manoj"}
+            };
+            org.AddBatch( orgl);
+        }
+
+        
     }
 }
